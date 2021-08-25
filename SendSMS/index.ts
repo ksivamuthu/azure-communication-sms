@@ -1,11 +1,12 @@
 import { DefaultAzureCredential } from "@azure/identity";
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 import { SmsClient } from "@azure/communication-sms";
-const endpoint = "https://comm-siva.communication.azure.com";
+
+const fromPhoneNumber = process.env.FROM_PHONE_NUMBER;
+const endpoint = process.env.COMM_SERVICE_ENDPOINT;
+
 const credential = new DefaultAzureCredential();
 const client = new SmsClient(endpoint, credential);
-
-const fromPhoneNumber = process.env.FromPhoneNumber;
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
     context.log('HTTP trigger function processed a request.');

@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_EXTENSION_VERSION": "~3",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FROM_PHONE_NUMBER": "+1xxxxxxxxx",
+    "COMM_SERVICE_ENDPOINT":  ""
+  }
+}
